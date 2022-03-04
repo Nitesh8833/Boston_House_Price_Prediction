@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOston House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="{{url_for('static', filename='style.js')}}"></script>
+<!--    <script src="app.js"></script>-->
+<!--	<link rel="stylesheet" href="app.css">-->
+</head>
+<body>
+<h1 class="h1t">Boston House Price Prediction</h1>
+<div class="img"></div>
+<form class="form">
+	<div class="row" id="loginForm">
+        <table>
+         <tr>
+             <td>
+                  <label for="usr">CRIM : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="CRIM VALUE">
+             </td>
+             <td>
+                 <label for="usr">ZN : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="ZN VALUE">
+             </td>
+             <td>
+                 <label for="usr">INDUS : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="INDUS VALUE">
+             </td>
+             <td>
+                 <label for="usr">CHAS : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="CHAS VALUE">
+             </td>
+             <td>
+                 <label for="usr">NOX : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="NOX VALUE">
+             </td>
+         </tr>
+            <tr>
+                <td>
+                    <label for="usr">RM : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="RM VALUE">
+                </td>
+                <td>
+                    <label for="usr">AGE : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="AGE VALUE">
+                </td>
+                <td>
+                    <label for="usr">DIS : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="DIS VALUE">
+                </td>
+                <td>
+                    <label for="usr">RAD : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="RAD VALUE">
+                </td>
+                <td><label for="usr">TAX : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="TAX VALUE"></td>
+            </tr>
+            <tr>
+                <td><label for="usr">PTRATIO : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="PTRATIO VALUE"></td>
+                <td><label for="usr">B : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="B VALUE"></td>
+                <td><label for="usr">LSTAT : </label>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="LSTAT VALUE""></td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+		
+        
+</div>
+<!--	<p>Area (Square Feet)</p>-->
+<!--    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">-->
+<!--	<h2>BHK</h2>-->
+<!--	<div class="switch-field">-->
+<!--		<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>-->
+<!--		<label for="radio-bhk-1">1</label>-->
+<!--		<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>-->
+<!--		<label for="radio-bhk-2">2</label>-->
+<!--		<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>-->
+<!--		<label for="radio-bhk-3">3</label>-->
+<!--		<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>-->
+<!--		<label for="radio-bhk-4">4</label>-->
+<!--		<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>-->
+<!--		<label for="radio-bhk-5">5</label>-->
+<!--	</div>-->
+	</form>
+<form class="form1">
+<!--	<h2>Bath</h2>-->
+<!--	<div class="switch-field">-->
+<!--		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>-->
+<!--		<label for="radio-bath-1">1</label>-->
+<!--		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>-->
+<!--		<label for="radio-bath-2">2</label>-->
+<!--		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>-->
+<!--		<label for="radio-bath-3">3</label>-->
+<!--		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>-->
+<!--		<label for="radio-bath-4">4</label>-->
+<!--		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>-->
+<!--		<label for="radio-bath-5">5</label>-->
+<!--	</div>-->
+<!--		<h2>Location</h2>-->
+<!--	<div>-->
+<!--  <select class="location" name="" id="uiLocations">-->
+<!--    <option value="" disabled="disabled" selected="selected">Choose a Location</option>-->
+<!--		<option>Electronic City</option>-->
+<!--        <option>Rajaji Nagar</option>-->
+<!--  </select>-->
+<!--</div>-->
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</form>
+</body>
+</html>
